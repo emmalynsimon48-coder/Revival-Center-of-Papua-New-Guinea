@@ -1,0 +1,537 @@
+<img src="C:\Users\260175\Pictures\Holy Spirit.jpg" alt="Holy Spirit" class="w-full"> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revival Center of Papua New Guinea</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Advanced CSS */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-60px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(60px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes glow {
+            0%, 100% { text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
+            50% { text-shadow: 0 0 20px rgba(255, 215, 0, 0.8); }
+        }
+        
+        @keyframes pulse-border {
+            0%, 100% { border-color: rgba(255, 215, 0, 0.3); box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4); }
+            50% { border-color: rgba(255, 215, 0, 0.6); box-shadow: 0 0 20px rgba(255, 215, 0, 0.6); }
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -1000px 0; }
+            100% { background-position: 1000px 0; }
+        }
+        
+        @keyframes rotate-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes bounce-smooth {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        
+        /* ============== ANIMATION CLASSES ============== */
+        .fade-in { animation: fadeIn 0.8s cubic-bezier(0.36, 0, 0.66, -0.56) forwards; }
+        .slide-in-left { animation: slideInLeft 0.8s ease-out forwards; }
+        .slide-in-right { animation: slideInRight 0.8s ease-out forwards; }
+        .float-anim { animation: float 3s ease-in-out infinite; }
+        .glow-text { animation: glow 2s ease-in-out infinite; }
+        .pulse-glow { animation: pulse-border 2s ease-in-out infinite; }
+        .shimmer-effect { animation: shimmer 3s infinite; background-size: 1000px 100%; }
+        .rotate-anim { animation: rotate-slow 20s linear infinite; }
+        .bounce-anim { animation: bounce-smooth 2s ease-in-out infinite; }
+        .scale-in { animation: scaleIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+        
+        /* Stagger Animation Delays */
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        .stagger-5 { animation-delay: 0.5s; }
+        
+        /* ============== COLOR SCHEME ============== */
+        .bg-navy { background-color: #1a3a52; }
+        .bg-navy-dark { background-color: #0f2438; }
+        .text-gold { color: #ffd700; }
+        .text-gold-light { color: #ffed4e; }
+        .text-cream-dark { color: #e8f4f8; }
+        .border-navy-light { border-color: #3a5a72; }
+        
+        /* ============== GRADIENT BACKGROUNDS ============== */
+        .bg-gradient-hero { 
+            background: linear-gradient(135deg, #1a3a52 0%, #2d5f7d 50%, #0f2438 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bg-gradient-section {
+            background: linear-gradient(to bottom, 
+                rgba(26, 58, 82, 0.95) 0%,
+                rgba(45, 95, 125, 0.9) 50%,
+                rgba(15, 36, 56, 0.95) 100%);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* ============== GLASS MORPHISM ============== */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+        }
+        
+        .glass-effect-dark {
+            background: rgba(26, 58, 82, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            border-radius: 12px;
+        }
+        
+        /* ============== TYPOGRAPHY ============== */
+        .font-heading { 
+            font-family: 'Georgia', 'Garamond', serif; 
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Georgia', serif;
+            transition: all 0.3s ease;
+        }
+        
+        h1:hover, h2:hover, h3:hover { color: #ffed4e; text-shadow: 0 0 15px rgba(255, 215, 0, 0.3); }
+        
+        /* ============== SMOOTH HOVER TRANSITIONS ============== */
+        a {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        a:hover {
+            transform: translateY(-2px);
+            color: #ffed4e !important;
+        }
+        
+        /* ============== CARD & BOX EFFECTS ============== */
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 12px;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
+        }
+        
+        .shadow-glow {
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .shadow-glow:hover {
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.4);
+        }
+        
+        /* ============== BUTTON STYLES ============== */
+        .btn-advanced {
+            position: relative;
+            overflow: hidden;
+            padding: 12px 32px;
+            border-radius: 50px;
+            border: 2px solid #ffd700;
+            background: linear-gradient(135deg, #1a3a52, #2d5f7d);
+            color: #ffd700;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-advanced::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn-advanced:hover::before { left: 100%; }
+        
+        .btn-advanced:hover {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+            transform: scale(1.05);
+        }
+        
+        /* ============== IMAGE EFFECTS ============== */
+        img {
+            transition: filter 0.4s ease, transform 0.4s ease;
+        }
+        
+        .img-hover:hover {
+            filter: brightness(1.1) drop-shadow(0 0 8px rgba(255, 215, 0, 0.3));
+            transform: scale(1.02);
+        }
+        
+        .img-frame {
+            border: 3px solid #ffd700;
+            border-radius: 10px;
+            padding: 4px;
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+        }
+        
+        /* ============== SEPARATOR & DECORATIONS ============== */
+        .separator-animated {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #ffd700, transparent);
+            margin: 20px 0;
+            animation: fadeIn 1s ease-out;
+        }
+        .bg-navy { background-color: #ee0cdb48; }
+        .text-gold { color: #0e0f0fcc; }
+        .text-cream-dark { color: #15e202; }
+        .border-navy-light { border-color: #5c66009d; }
+        .bg-gradient-hero { background: linear-gradient(135deg, #12afcafd, #f514bd); }
+        .font-heading { font-family: 'Georgia', serif; }
+    </style>
+</head>
+<body class="bg-navy-dark text-cream-dark">
+    <!-- HEADER SECTION -->
+    <header class="bg-gradient-hero fade-in py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="font-heading text-5xl md:text-6xl font-bold mb-4 text-gradient glow-text">
+                Revival Center
+            </h1>
+            <p class="text-2xl text-gold-light slide-in-right stagger-1 mb-4">
+                Of Papua New Guinea
+            </p>
+            <div class="separator-animated"></div>
+            <p class="text-lg text-cream-dark/80 max-w-2xl mx-auto fade-in stagger-2">
+                Bringing hope and transformation through the power of the Gospel since 1982
+            </p>
+            <button class="btn-advanced mt-8 scale-in stagger-3">Explore Our Mission</button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT SECTION -->
+    <main class="py-20 bg-gradient-section">
+        <div class="container mx-auto px-6">
+            
+            <!-- Hero Section -->
+            <section class="mb-20">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="scroll-slide-left fade-in stagger-1">
+                        <h2 class="font-heading text-4xl font-bold mb-6 text-gold-light">
+                            Our Journey
+                        </h2>
+                        <p class="text-cream-dark/90 leading-relaxed mb-4 text-lg">
+                            The Revival Center of Papua New Guinea began in 1982 in Lumi, starting with 28 baptisms and quickly spreading across villages in the highlands.
+                        </p>
+                        <p class="text-cream-dark/80 leading-relaxed mb-8">
+                            Under the guidance of Pastor Godfrey Wippon and other pioneering souls, the message of revival transformed entire communities.
+                        </p>
+                        <button class="btn-advanced">Learn More</button>
+                    </div>
+                    
+                    <div class="scroll-slide-left fade-in stagger-2">
+                        <div class="img-frame shadow-glow">
+                            <img src="C:\Users\260175\Pictures\revival.jpg" alt="Revival center" class="w-full object-cover rounded-lg img-hover" height="400" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DIVIDER -->
+            <div class="separator-animated my-16"></div>
+
+            <!-- PILLARS SECTION -->
+            <section class="mb-20">
+                <div class="text-center mb-12">
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold mb-4 text-gold-light">
+                        Pillars of Faith
+                    </h2>
+                    <p class="text-cream-dark/80 max-w-2xl mx-auto">
+                        Our foundational beliefs and spiritual guidance
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Pillar 1 -->
+                    <div class="glass-effect-dark p-8 card-hover fade-in stagger-1 border-2 border-gold border-opacity-30">
+                        <div class="text-gold text-4xl mb-4">✦</div>
+                        <h3 class="font-heading text-2xl font-bold text-gold-light mb-4">
+                            Salvation Through Acts 2:38
+                        </h3>
+                        <p class="text-cream-dark/90 leading-relaxed">
+                            Repentance, baptism in water, and receiving the Holy Spirit form the foundation of our faith and transformation.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 2 -->
+                    <div class="glass-effect-dark p-8 card-hover fade-in stagger-2 border-2 border-gold border-opacity-30">
+                        <div class="text-gold text-4xl mb-4">✦</div>
+                        <h3 class="font-heading text-2xl font-bold text-gold-light mb-4">
+                            Guidance of the Holy Spirit
+                        </h3>
+                        <p class="text-cream-dark/90 leading-relaxed">
+                            Transformation and renewal come not by human strength but by God's Spirit, as promised in Zechariah 4:6.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DIVIDER -->
+            <div class="separator-animated my-16"></div>
+
+            <!-- HISTORY SECTION -->
+            <section class="mb-20">
+                <div class="glass-effect-dark p-12 card-hover fade-in">
+                    <h2 class="font-heading text-4xl font-bold mb-8 text-gradient text-center">
+                        Historical Timeline
+                    </h2>
+                    
+                    <div class="space-y-8">
+                        <div class="border-l-4 border-gold pl-6 py-2 scroll-slide-left fade-in stagger-1">
+                            <h3 class="text-gold-light font-heading text-xl font-bold">1982</h3>
+                            <p class="text-cream-dark/80">Revival Center established in Lumi with 28 baptisms</p>
+                        </div>
+                        
+                        <div class="border-l-4 border-gold pl-6 py-2 scroll-slide-left fade-in stagger-2">
+                            <h3 class="text-gold-light font-heading text-xl font-bold">1980s - 1990s</h3>
+                            <p class="text-cream-dark/80">Rapid expansion across highland villages and communities</p>
+                        </div>
+                        
+                        <div class="border-l-4 border-gold pl-6 py-2 scroll-slide-left fade-in stagger-3">
+                            <h3 class="text-gold-light font-heading text-xl font-bold">2000s - Present</h3>
+                            <p class="text-cream-dark/80">Established strong roots across PNG, continuing legacy of faith</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MISSION & VISION SECTION -->
+            <section class="mb-20">
+                <div class="text-center mb-12">
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold mb-4 text-gold-light">
+                        Mission & Vision
+                    </h2>
+                </div>
+
+                <div class="glass-effect-dark p-12 card-hover fade-in mb-8">
+                    <p class="text-cream-dark/90 leading-relaxed text-center text-lg">
+                        To bring the message of hope and salvation to every corner of Papua New Guinea, equipping believers to live transformed lives and impact their communities for Christ.
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <blockquote class="font-heading text-3xl italic text-gold-light max-w-4xl mx-auto mb-4 fade-in">
+                        "Not by might, nor by power, but by my Spirit, says the Lord."
+                    </blockquote>
+                    <p class="text-cream-dark/60 fade-in stagger-1">— Zechariah 4:6</p>
+                </div>
+            </section>
+
+            <!-- DIVIDER -->
+            <div class="separator-animated my-16"></div>
+
+            <!-- CHURCHES SECTION -->
+            <section class="mb-20">
+                <div class="text-center mb-12">
+                    <h2 class="font-heading text-4xl font-bold mb-4 text-gold-light">
+                        Our Churches & Ministries
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="glass-effect-dark p-8 card-hover fade-in stagger-1 text-center">
+                        <div class="text-gold text-4xl mb-4">⛪</div>
+                        <h3 class="font-heading text-2xl font-bold text-gold-light mb-4">Across PNG</h3>
+                        <p class="text-cream-dark/80">Churches in highlands and coastal regions serving as beacons of hope and transformation in their communities.</p>
+                    </div>
+
+                    <div class="glass-effect-dark p-8 card-hover fade-in stagger-2 text-center">
+                        <div class="text-gold text-4xl mb-4">👨‍👩‍👧‍👦</div>
+                        <h3 class="font-heading text-2xl font-bold text-gold-light mb-4">Youth Ministry</h3>
+                        <p class="text-cream-dark/80">Vibrant engagement in worship, discipleship, and outreach activities for our young people.</p>
+                    </div>
+
+                    <div class="glass-effect-dark p-8 card-hover fade-in stagger-3 text-center">
+                        <div class="text-gold text-4xl mb-4">🙏</div>
+                        <h3 class="font-heading text-2xl font-bold text-gold-light mb-4">Community Service</h3>
+                        <p class="text-cream-dark/80">Women's and men's ministries, community outreach, and support programs for those in need.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CALL TO ACTION -->
+            <section class="text-center">
+                <h2 class="font-heading text-4xl font-bold mb-6 text-gold-light fade-in">
+                    Get Involved
+                </h2>
+                <p class="text-cream-dark/80 max-w-2xl mx-auto mb-8 fade-in stagger-1">
+                    Join us in our mission to spread the message of hope, salvation, and spiritual transformation. We welcome all to be part of our growing community.
+                </p>
+                <button class="btn-advanced scale-in stagger-2">Join Our Community</button>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="bg-navy py-16 border-t-2 border-gold border-opacity-30">
+       <div class="container mx-auto px-6 py-16">
+         <div class="grid md:grid-cols-3 gap-12">
+           
+           
+          
+         
+         
+         <div class="border-t border-navy-light mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+           <p class="text-cream-dark/50 text-sm">
+            The Revival Center of Papua New Guinea began in 1982 in Lumi, starting with 28 baptisms and quickly spreading across villages.
+           </p>
+           <p class="flex items-center gap-2 text-cream-dark/50 text-sm">
+             <span class="w-4 h-4 text-gold">♥</span>  Pastor Godfrey Wippon is honored as a founding father, alongside other pioneers who sacrificed to establish revival churches.
+             Who played a vital role in establishing revival churches across Papua New Guinea.
+     The brave souls who first brought the message of revival to the highlands of PNG, laying the groundwork for generations to come.
+  </p>
+         </div>
+       </div>
+     </footer>
+   
+     <section class="py-24 bg-background">
+       <div class="container mx-auto px-6">
+         <div class="text-center mb-16">
+           <span class="text-gold font-medium tracking-widest uppercase text-sm">Honoring Our Heritage</span>
+           <h2 class="font-heading text-4xl md:text-5xl font-bold text-navy mt-4 mb-6">
+             Pillars of Faith
+           </h2>
+           <p class="text-muted-foreground max-w-2xl mx-auto">
+             Salvation through Acts 2:38 — repentance, baptism in water, and receiving the Holy Spirit.
+             Guidance of the Holy Spirit — transformation and renewal come not by human strength but by God’s Spirit (Zechariah 4:6).
+         </p>
+         
+           
+           <p class="text-lg md:text-xl text-cream-dark/90 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+             A journey of faith, hope, and spiritual awakening that transformed 
+             communities across the highlands and beyond.
+           </p>
+           
+          
+           <h2 class="font-heading text-4xl md:text-5xl font-bold mt-4 mb-6">Our History</h2>
+
+               
+             
+       
+       
+       <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+         <div class="w-6 h-10 border-2 border-gold/50 rounded-full flex items-start justify-center p-2">
+           <div class="w-1.5 h-3 bg-gold rounded-full animate-pulse"></div>
+         </div>
+       </div>
+     </section>
+   
+ 
+
+   
+   Revival Centres Of Papua New Guinea (RCPNG) is a pentecostal church. We are affiliated with Revival Fellowships worldwide. We preach Salvation Message as found in the book Acts chapter 2 verse 38. We emphasise on the necessity for one to be born-again of water and the Holy Spirit.
+   
+   
+     The Revival Center of Papua New Guinea began in 1982 in Lumi, starting with 28 baptisms and quickly spreading across villages.
+   
+   
+   
+     We express God's love through practical service to our neighbors and nation.
+   
+ 
+ 
+ 
+     <section id="mission" class="py-24 bg-gradient-hero text-primary-foreground">
+       <div class="container mx-auto px-6">
+         <div class="text-center mb-16">
+           <span class="text-gold font-medium tracking-widest uppercase text-sm">Our Purpose is to bring hope and salvation to the people of Papua New Guinea.</span>
+           <h2 class="font-heading text-4xl md:text-5xl font-bold mt-4 mb-6">
+             Mission & Vision
+           </h2>
+           <p class="text-cream-dark/80 max-w-3xl mx-auto text-lg leading-relaxed">
+             To bring the message of hope and salvation to every corner of Papua New Guinea, 
+             equipping believers to live transformed lives and impact their communities for Christ.
+             uphold the unchanging Word of God,and emphasize the renewing power of the Holy Spirit,Show God’s love through service to communities and the nation.
+           </p>
+         </div>
+         
+         <div class="grid md:grid-cols-3 gap-8 mt-16">
+           
+             <div 
+               key={value.title}
+               class="bg-navy-light/30 backdrop-blur-sm border border-gold/20 rounded-2xl p-8 text-center hover:border-gold/50 transition-all duration-300 hover:-translate-y-2"
+             >
+               <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-gold rounded-xl mb-6 shadow-gold">
+                 <value.icon class="w-8 h-8 text-navy" />
+               
+           
+         </div>
+         
+         
+         <div class="mt-20 text-center">
+           <blockquote class="font-heading text-2xl md:text-3xl italic text-gold-light max-w-4xl mx-auto">
+             "Not by might, nor by power, but by my Spirit, says the Lord."
+           </blockquote>
+           <h3 class="text-cream-dark/60">— Zechariah 4:6</h3>
+         </div>
+       </div>
+     </section>
+ 
+ <h2 class = "font-heading text-4xl mb-6 text-center">Our Church</h2>
+ <p class="text-cream dark/80 max-w-3xl mx-auto text-lg leading-relaxed text-center mb-16">
+   We have churches across Papua New Guinea, from the highlands to the coastal regions, each serving as a beacon of hope and transformation in their communities.
+At our church we have different ministries that cater to the needs of our members and the community.
+ We have a vibrant youth ministry that engages young people in worship, discipleship, and outreach activities. 
+We also have a women's ministry that empowers and supports women in their faith journey and life challenges.
+ And we have a men ministry that provides spiritual guidance and fellowship for men.
+</p>
+
+<h2 class="font-heading text-4xl mb-6 text-center">Get Involved</h2>
+<p class="text-cream-dark/80 max-w-3xl mx-auto text-lg leading-relaxed text-center mb-16"></p>
+</body>
+</html>
+our church get involved in community service by cleaning up local parts, providng food and clothing to those in need, and sharing the message of hope and salvation with those who have not
+yet heard it.
+ we also encourage our members to get involved in our various ministries and outreach programs.
+
+ <footer class="bg-navy text-cream-dark/80 py-12">
+   <div class="container mx-auto px-6 text-center">
+     <p class="text-sm"> Created by Ms Simon
